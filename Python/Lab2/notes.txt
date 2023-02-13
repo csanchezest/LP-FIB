@@ -1,0 +1,8 @@
+    def __iter__(self):
+        yield self.rt
+        ls = self.child
+        while len(ls) != 0:
+            x = ls.pop(0)
+            if len(x.child) != 0:
+                ls.append(x.getChild)
+            yield x.rt
